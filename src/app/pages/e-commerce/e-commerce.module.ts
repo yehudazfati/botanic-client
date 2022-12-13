@@ -56,6 +56,7 @@ import { EarningPieChartComponent } from './earning-card/back-side/earning-pie-c
 import { EarningCardFrontComponent } from './earning-card/front-side/earning-card-front.component';
 import { EarningLiveUpdateChartComponent } from './earning-card/front-side/earning-live-update-chart.component';
 import { ContactsComponent } from '../dashboard/contacts/contacts.component';
+import { ChartsModule } from '../charts/charts.module';
 
 @NgModule({
   imports: [
@@ -72,6 +73,7 @@ import { ContactsComponent } from '../dashboard/contacts/contacts.component';
     NgxEchartsModule,
     NgxChartsModule,
     LeafletModule,
+    ChartsModule
   ],
   declarations: [
     ECommerceComponent,
