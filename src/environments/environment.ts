@@ -10,5 +10,6 @@
 
 export const environment = {
   production: false,
-  SOCKET_ENDPOINT: 'http://localhost:81'
+  SOCKET_ENDPOINT: 'http://localhost:81',
+  PROCESS_ENDPOINT: 'http://localhost:3000'
 };
