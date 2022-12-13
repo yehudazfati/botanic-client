@@ -20,6 +20,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { SocketioService } from './socketio.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -40,6 +41,7 @@ import {
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
   ],
+  providers: [SocketioService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
