@@ -47,8 +47,8 @@ export class StatsBarAnimationChartComponent implements AfterViewInit, OnDestroy
   setChartOption(chartVariables) {
     this.options = {
       color: [
-        chartVariables.firstAnimationBarColor,
-        chartVariables.secondAnimationBarColor,
+        /* chartVariables.firstAnimationBarColor */'red',
+        /* chartVariables.secondAnimationBarColor */'orange',
       ],
       grid: {
         left: 0,
@@ -57,7 +57,7 @@ export class StatsBarAnimationChartComponent implements AfterViewInit, OnDestroy
         bottom: 0,
       },
       legend: {
-        data: ['transactions', 'orders'],
+        data: ['Critical', 'Major'],
         borderWidth: 0,
         borderRadius: 0,
         itemWidth: 15,
@@ -120,13 +120,13 @@ export class StatsBarAnimationChartComponent implements AfterViewInit, OnDestroy
       ],
       series: [
         {
-          name: 'transactions',
+          name: 'Critical',
           type: 'bar',
           data: this.linesData.firstLine,
           animationDelay: idx => idx * 10,
         },
         {
-          name: 'orders',
+          name: 'Major',
           type: 'bar',
           data: this.linesData.secondLine,
           animationDelay: idx => idx * 10 + 100,
