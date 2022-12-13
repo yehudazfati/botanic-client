@@ -22,7 +22,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get(environment.PROCESS_ENDPOINT).subscribe((res) => {
-      console.log('xxxx', res);
+      setTimeout(() => {
+        document.getElementById('botpanic_spinner').style.display = 'none'
+      }, 3000);
     })
 
     this.analytics.trackPageViews();
